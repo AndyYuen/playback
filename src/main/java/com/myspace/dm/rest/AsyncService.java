@@ -60,7 +60,7 @@ public class AsyncService {
 		}
     	for (Movement movement : list) {
     		if (lastTime != 0) {
-    			delay = (movement.getTime().longValue() - lastTime);
+    			delay = (movement.getTime().longValue() - lastTime) / 1000;
     			System.out.println("Delay in milliseconds: " + delay);
     		}
     		if (delay > 0) {
